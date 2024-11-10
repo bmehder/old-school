@@ -1,0 +1,107 @@
+:root {
+	color-scheme: light dark;
+}
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	/* outline: 1px solid red; */
+}
+
+body {
+	height: 100%;
+	font-family: system-ui, sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.6;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+/* Defaults */
+p,
+li {
+	max-width: 65ch;
+}
+
+ul,
+ol {
+	padding-left: 1.5rem;
+}
+
+/* Utility */
+.inner {
+	width: min(100% - 3rem, 1024px);
+	margin: auto;
+	padding-block: 1.5rem;
+}
+
+.flow > * + * {
+	margin-top: 1.5rem;
+}
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: auto;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+/* Component Layout */
+.main-and-sidebar {
+	display: grid;
+	gap: 1.5rem;
+	@media (width > 768px) {
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+	}
+}
+
+/* Header */
+header {
+	background: dodgerblue;
+	color: white;
+}
+
+header .flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+header .logo {
+	font-size: 1.5rem;
+}
+
+header ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	list-style: none;
+	padding: 0;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+}
+
+header a:hover {
+	text-decoration: underline;
+}
+
+/* Footer */
+footer {
+	background: black;
+	color: white;
+	text-align: center;
+}
